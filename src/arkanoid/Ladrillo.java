@@ -7,7 +7,6 @@ public class Ladrillo {
 	private boolean destruido;
 	private boolean alcanzado;
 	private int fila;
-	private int valor;
 	
 	public Ladrillo(int x, int y, int fila) {
 		posicionX = x;
@@ -43,5 +42,8 @@ public class Ladrillo {
 		return posicionY;
 	}
 	
+	public boolean estaDestruido() {
+		return destruido;
+	}
 	
 }
