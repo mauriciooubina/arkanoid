@@ -1,19 +1,20 @@
 package arkanoid;
 
-import java.util.Random;
-
 public class Ladrillo {
 
-	int posicionX;
-	int posicionY;
-	boolean destruido;
-	boolean alcanzado;
+	private int posicionX;
+	private int posicionY;
+	private boolean destruido;
+	private boolean alcanzado;
+	private int fila;
+	private int valor;
 	
-	public Ladrillo(int x, int y) {
-		posicionX = 0;
-		posicionY = 0;
+	public Ladrillo(int x, int y, int fila) {
+		posicionX = x;
+		posicionY = y;
 		destruido = false;
 		alcanzado = false;
+		this.fila = fila;
 	}
 	
 	public boolean alcanzado(int posX, int posY) {
@@ -23,12 +24,13 @@ public class Ladrillo {
 		return alcanzado;
 	}
 	
-	public void destruirLadrillo() {
+	public int destruirLadrillo() {
 		destruido = true;
+		return fila;
 	}
 	
-	public int rebotar() {
-		int grados = (int) (Math.random()*(90-85+1)+85);
+	public float rebotar() {
+		float grados = (float) (Math.random()*(90-85+1)+85);
 		destruirLadrillo();
 		return grados;
 	}

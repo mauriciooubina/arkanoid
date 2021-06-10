@@ -4,8 +4,8 @@ import java.util.Vector;
 
 public class Ranking {
 
-	Vector<String> nombres = new Vector<String>();
-	Vector<Integer> puntajes = new Vector<Integer>();
+	private Vector<String> nombres = new Vector<String>();
+	private Vector<Integer> puntajes = new Vector<Integer>();
 	
 	public void agregadorJugador(String nombre) {
 		int posicion = nombres.size();
