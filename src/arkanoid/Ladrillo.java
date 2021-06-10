@@ -1,6 +1,6 @@
 package arkanoid;
 
-public class Ladrillo {
+public class Ladrillo implements Posicionable{
 
 	private int posicionX;
 	private int posicionY;
@@ -28,8 +28,8 @@ public class Ladrillo {
 		return fila;
 	}
 	
-	public float rebotar() {
-		float grados = (float) (Math.random()*(90-85+1)+85);
+	public float rebotar(int x, int y, float angulo) {
+		float grados = (float) (Math.random()*(95-85+1)+85);
 		destruirLadrillo();
 		return grados;
 	}
